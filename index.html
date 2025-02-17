@@ -1,0 +1,671 @@
+<!--
+  Greetings!
+
+  This delightful template has been meticulously crafted and brought to life by Charles Norris. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
+-->
+
+<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
+
+<!--
+  Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Read and update content attributes accordingly  -->
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Charles Norris - Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://ossportfolio.netlify.app">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Charles Norris - Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Charles Norris's- Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/thumbnail.jpg"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    <!-- Your name here -->
+    <title>Charles Norris's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            <span>Hey I'm Charles Norris</span>
+            <span>I'm a Software developer </span>
+            <span>Based in Washignton DC </span>
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            🎓 Pursuing a degree in Information Technology with a focus on Database Technology & Programming at George Mason University (Graduation: May 2025).
+            <br>
+            💡 Experience : <br>
+            Software Engineering Intern at George Mason University<br>
+            Proficient in Penetration Testing<br>
+            Active open-source contributor.<br>
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">OpportunAI</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  OpportunAI is an intelligent, AI-driven platform designed to streamline your job application process.
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>Python</li>
+                  <li>MongoDB</li>
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Charlesnorris509/OpportunAI" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href=" https://github.com/Charlesnorris509"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/opportunai.webp"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Spotify Accessibility Redesign</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">The redesigned app enhances usability through a simplified UI, larger buttons, and voice-
+                  assisted navigation.</p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>NodeJS</li>
+                  <li>BootStrap</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Charlesnorris509/Codepath_X_AmazonNext_Design_Challenge/tree/main/Application/spotifyRedesign" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href=" https://github.com/Charlesnorris509"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/spotifyredesign-003.webp"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">IdealVilla-PMS</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  This is a property management software designed for a small hotel under 60 rooms
+                </p>
+                <ol class="work-technologies">
+                  <li>PHP</li>
+                  <li>Apache Cassandra</li>
+                  <li>CSS</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Charlesnorris509/IdealVilla-PMS" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/IdealVilla-PMS-picture.webp"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles And Open-Source Contribution</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    NFL Helmet Mapping - Superbowl Fest  ✨
+                  </h3>
+                  <p class="article-text">
+                    Note: Deepsort Model tuned to identify and assign football players’ helmets from video footage. In particular, creating algorithms capable of assigning detected helmet impacts to correct players via tracking information.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://github.com/Charlesnorris509/Konwinski/blob/main/Kaggle/PreviousCompettitons/NFL/tuning-deepsort-with-helmet-mapping-NFL.ipynb" class="link" target="_blank" rel="noopener"
+                    >Source Code</a
+                  >
+                  <span class="reaction-count">
+                    <img src="./assets/images/heart-outline.svg" alt="heart" />
+                    6
+                  </span>
+                </div>
+              </div>
+              </picture>
+              <video width="400" height="320" class="article-illustration">
+                <source src="assets/images/NflHelmetMapping.mp4" type="video/mp4">
+              </video>
+              <br>
+              <button id="playPauseBtn" class="video-btn">Play</button>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById("myVideo");
+                const playPauseBtn = document.getElementById("playPauseBtn");
+
+                if (!video || !playPauseBtn) {
+                    console.error('Required elements not found');
+                    return;
+                }
+
+                playPauseBtn.addEventListener("click", function () {
+                    if (video.paused || video.ended) {
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                playPauseBtn.textContent = "Pause";
+                            }).catch(error => {
+                                console.error("Error playing video:", error);
+                            });
+                        }
+                    } else {
+                        video.pause();
+                        playPauseBtn.textContent = "Play";
+                    }
+                });
+
+                video.addEventListener('click', function() {
+                    playPauseBtn.click();
+                });
+
+                video.addEventListener('ended', function() {
+                    playPauseBtn.classList.remove('playing');
+                    playPauseBtn.style.opacity = '1';
+                    playPauseBtn.textContent = "Play";
+                });
+
+                video.addEventListener('loadeddata', function() {
+                    playPauseBtn.style.display = 'flex';
+                });
+
+                video.addEventListener('error', function(e) {
+                    console.error("Error loading video:", e);
+                    playPauseBtn.disabled = true;
+                    playPauseBtn.textContent = "Error loading video";
+                });
+            });
+            </script>
+
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">Penetration Testing   ✨</h3>
+                  <p class="article-text">
+                     Linux, web hacking, and network fundamentals. Mastered tools like Burp Suite and Wireshark,
+                     , demonstrating deep knowledge and hands-on experience in ethical hacking.
+                    <img src="https://tryhackme-badges.s3.amazonaws.com/Charlesnorriss03.png" alt="Your Image Badge" />
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://tryhackme-badges.s3.amazonaws.com/Charlesnorriss03.png" class="link" target="_blank" rel="noopener"
+                    >View Badge</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    2
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    DS & Algorithm || System Design Paradigm  ✨
+                  </h3>
+                  <p class="article-text">
+                    This journal chronicles my exploration of data structures, algorithms, and system design as a senior IT student.
+                    It captures my learning journey, problem-solving strategies, and insights gained along the way.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://charlesnorris509.github.io/Blog-Post/" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    177
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">Leveraging AI for Development  ✨</h3>
+                  <div class="article-text">
+                    Overview of a month worth of AI assisted development.
+                    including constraints and Success with System Design, Prompt Engineering, and Effectiveness Analysis
+                  </div>
+                </div>
+                <div class="article-info">
+                  <a href="https://charlesnorris509.github.io/LeveragingAI/" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      loading="lazy"
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                    />
+                    10
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/Python-logo-notext.svg.png" alt="Python3" class="skills-img" loading="lazy" title="Python3">
+                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/AWS.webp" alt="AWS" class="skills-img" loading="lazy" title="AWS Cloud">
+                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
+                 <img src="assets/images/skills/C_sharp.png" alt="C Sharp" class="skills-img" loading="lazy" title="C#">
+                 <img src="assets/images/skills/MySQL-Logo.png" alt="MySQL" class="skills-img" loading="lazy" title="MySql">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/mongodb-logo.webp" alt="MongoDB" class="skills-img" loading="lazy" title="MongoDB">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+      <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Charles is one of the most intellectually curious students I have encountered in my two-plus decades of educating college students.
+                He is also kind, dependable, dedicated, and patient, all of which come in very handy when mentoring INTO Mason's students.
+                I'd hire Charles for any number of jobs if I could.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/Harris-Scott.webp"
+                  alt="Dr. Steven Harris-Scott"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Professor Harris-Scott</h3>
+                  <p class="testimonial-author-job">Director of Academic @George Mason University</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Charles possesses a rare combination of intellectual curiosity, technical expertise, and problem-solving ability.
+                His deep understanding of system internals allows him to design and modify complex software solutions—an invaluable skill in the field of software development.
+                Beyond his technical acumen, he is dependable, patient, and dedicated, demonstrating the resilience and focus required to thrive in this demanding profession.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/JamesHoldener.webp"
+                  alt="James Holdener"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">
+                   Professor James Holdener
+                  </h3>
+                  <p class="testimonial-author-job"> Principal Engineer @Mitre
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+             
+                Talented artist, experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Charles
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/Phillipe-Siclait.webp"
+                  alt="Phillippe Siclait"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Phillippe Siclait</h3>
+                  <p class="testimonial-author-job">Co-founder & CEO @Clay</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Charles is a true professional with amazing talent. He is a creative
+                thinker, has his finger on the pulse of whats to come, and
+                absolutely one of the quickest and best problem solvers I have
+                the pleasure to mentor.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/DanielFernandez.webp"
+                  alt="Daniel Fernandez"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Daniel Fernandez</h3>
+                  <p class="testimonial-author-job">Senior SWE @Amazon</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Charles is a talented software developer with a keen understanding of system architecture and data processing.
+                I have no doubt that he will continue to make significant contributions in the field, and I highly recommend him for any future opportunities
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/"
+                  alt="Debra Garcia"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Debra Garcia</h3>
+                  <p class="testimonial-author-job">Capstone Professor @Engines</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                I was Mr. Norris’s professor for three Information Technology (IT) courses at George Mason University.
+                His ability to create and modify programs shows he can understand the internals of systems
+                a talent not possessed by everyone in the IT field. I believe he shows promise as a software developer. He clearly has the intellectual capacity for it, but also the patience and focus needed to succeed in that difficult field.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/Gene-Shuman.webp"
+                  alt="Gene Suman"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Gene Shuman</h3>
+                  <p class="testimonial-author-job">Professor Information Science and Technology @GMU</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I specialized in backend development. Focused on Designing
+                and Building scalable systems. My work involves creating robust web interfaces, and
+                designing efficient backend infrastructure
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and in my spare time, I play Semi Professional futsal with Alexandria MetroStar
+              </p>
+              <img
+                src="assets/images/signature.png"
+                alt="Charles Norris"
+                class="signatures"
+                loading="lazy"
+              />
+            </div>
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href=" https://github.com/Charlesnorris509" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/charlesanorris/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://x.com/chucknrs509" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> -  Designed & Developed by <a target="_blank" rel="noopener" href=" https://github.com/Charlesnorris509">Charles Norris.</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
