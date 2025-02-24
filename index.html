@@ -153,55 +153,104 @@
                 <img
                   loading="lazy"
                   src="assets/images/work/opportunai.webp"
-                  alt="agency elevation"
+                  alt="OpportunAI"
                 />
               </picture>
             </div>
 
             <div class="work-box">
               <div class="work-textbox">
-                <h3 class="h3">Project Name 1</h3>
+                <h3 class="h3">Optiver Realized Volatility Prediction</h3>
                 <p class="work-text">
-                  Brief description of Project Name 1.
+                The "Optiver Realized Volatility Prediction" project focuses on predicting stock price volatility using historical trading data.
+                This comprehensive notebook demonstrates advanced data processing and feature engineering techniques to create a robust predictive model.
                 </p>
                 <ol class="work-technologies">
-                  <li>Technology 1</li>
-                  <li>Technology 2</li>
-                  <li>Technology 3</li>
+                  <li>Python 3</li>
+                  <li>Sklearn - KFold</li>
+                  <li>LightGBM</li>
                 </ol>
                 <div class="work-links">
-                  <a href="https://github.com/Charlesnorris509/ProjectName1" target="_blank" rel="noopener" class="link">Explore this project</a>
-                  <a href="https://github.com/Charlesnorris509" target="_blank" rel="noopener" title="Source code">
+                  <a href="https://github.com/Charlesnorris509/Konwinski/tree/main/Kaggle/PreviousCompettitons/Optiver" target="_blank" rel="noopener" class="link">Explore this project</a>
+                  <a href="https://github.com/Charlesnorris509/Konwinski/blob/main/Kaggle/PreviousCompettitons/Optiver/optiver-prediction.ipynb" target="_blank" rel="noopener" title="Source code">
                     <img src="assets/images/social-links/github.svg" alt="GitHub" loading="lazy" />
                   </a>
                 </div>
               </div>
               <picture class="work-img">
-                <img loading="lazy" src="assets/images/work/projectname1.webp" alt="Project Name 1" />
+                <img loading="lazy" src="assets/images/work/Optiver.webp" alt="Optiver" style="width: 1000px; height: 420px;" />
               </picture>
             </div>
 
             <div class="work-box">
               <div class="work-textbox">
-                <h3 class="h3">Project Name 2</h3>
+                <h3 class="h3">NEON Snake Game </h3>
                 <p class="work-text">
-                  Brief description of Project Name 2.
+                  Modern and visually striking take on the classic Snake game, featuring both AI and player-controlled modes.
+                  Designed with a futuristic neon aesthetic, the game delivers an engaging and immersive experience with smooth animations, responsive controls, and a dynamic user interface
                 </p>
                 <ol class="work-technologies">
-                  <li>Technology 1</li>
-                  <li>Technology 2</li>
-                  <li>Technology 3</li>
+                  <li>HTML/CSS</li>
+                  <li>Canvas API</li>
+                  <li>JavaScript</li>
+                  <li>Breadth-First Search (BFS)</li>
                 </ol>
                 <div class="work-links">
-                  <a href="https://github.com/Charlesnorris509/ProjectName2" target="_blank" rel="noopener" class="link">Explore this project</a>
+                  <a href="https://github.com/Charlesnorris509/SnakeGame" target="_blank" rel="noopener" class="link">Explore this project</a>
                   <a href="https://github.com/Charlesnorris509" target="_blank" rel="noopener" title="Source code">
                     <img src="assets/images/social-links/github.svg" alt="GitHub" loading="lazy" />
                   </a>
                 </div>
               </div>
-              <picture class="work-img">
-                <img loading="lazy" src="assets/images/work/opportunai.webp" alt="Project Name 2" />
-              </picture>
+              <div class="work-img">
+                <video id="projectVideo" width="1000" height="420" class="work-video">
+                  <source src="assets/images/work/SnakeGame.mp4" type="video/mp4">
+                </video>
+                <br>
+                <button id="video-btn" class="video-btn">Play</button>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const video = document.getElementById("projectVideo");
+                    const playPauseBtn = document.getElementById("video-btn");
+
+                    if (!video || !playPauseBtn) {
+                      console.error('Required elements not found');
+                      return;
+                    }
+
+                    playPauseBtn.addEventListener("click", function () {
+                      if (video.paused || video.ended) {
+                        video.play().then(() => {
+                          playPauseBtn.textContent = "Pause";
+                        }).catch(error => {
+                          console.error("Error playing video:", error);
+                        });
+                      } else {
+                        video.pause();
+                        playPauseBtn.textContent = "Play";
+                      }
+                    });
+
+                    video.addEventListener('click', function() {
+                      playPauseBtn.click();
+                    });
+
+                    video.addEventListener('ended', function() {
+                      playPauseBtn.textContent = "Play";
+                    });
+
+                    video.addEventListener('loadeddata', function() {
+                      playPauseBtn.style.display = 'block';
+                    });
+
+                    video.addEventListener('error', function(e) {
+                      console.error("Error loading video:", e);
+                      playPauseBtn.disabled = true;
+                      playPauseBtn.textContent = "Error loading video";
+                    });
+                  });
+                </script>
+              </div>
             </div>
 
             <div class="work-box">
