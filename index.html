@@ -363,47 +363,47 @@
               <br>
               <button id="video-btn" class="video-btn">Play</button>
               <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                  const video = document.getElementById("myVideo");
-                  const playPauseBtn = document.getElementById("video-btn");
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const video = document.getElementById("projectVideo");
+                    const playPauseBtn = document.getElementById("video-btn");
 
-                  if (!video || !playPauseBtn) {
-                    console.error('Required elements not found');
-                    return;
-                  }
-
-                  playPauseBtn.addEventListener("click", function () {
-                    if (video.paused || video.ended) {
-                      video.play().then(() => {
-                        playPauseBtn.textContent = "Pause";
-                      }).catch(error => {
-                        console.error("Error playing video:", error);
-                      });
-                    } else {
-                      video.pause();
-                      playPauseBtn.textContent = "Play";
+                    if (!video || !playPauseBtn) {
+                      console.error('Required elements not found');
+                      return;
                     }
-                  });
 
-                  video.addEventListener('click', function() {
-                    playPauseBtn.click();
-                  });
+                    playPauseBtn.addEventListener("click", function () {
+                      if (video.paused || video.ended) {
+                        video.play().then(() => {
+                          playPauseBtn.textContent = "Pause";
+                        }).catch(error => {
+                          console.error("Error playing video:", error);
+                        });
+                      } else {
+                        video.pause();
+                        playPauseBtn.textContent = "Play";
+                      }
+                    });
 
-                  video.addEventListener('ended', function() {
-                    playPauseBtn.textContent = "Play";
-                  });
+                    video.addEventListener('click', function() {
+                      playPauseBtn.click();
+                    });
 
-                  video.addEventListener('loadeddata', function() {
-                    playPauseBtn.style.display = 'block';
-                  });
+                    video.addEventListener('ended', function() {
+                      playPauseBtn.textContent = "Play";
+                    });
 
-                  video.addEventListener('error', function(e) {
-                    console.error("Error loading video:", e);
-                    playPauseBtn.disabled = true;
-                    playPauseBtn.textContent = "Error loading video";
+                    video.addEventListener('loadeddata', function() {
+                      playPauseBtn.style.display = 'block';
+                    });
+
+                    video.addEventListener('error', function(e) {
+                      console.error("Error loading video:", e);
+                      playPauseBtn.disabled = true;
+                      playPauseBtn.textContent = "Error loading video";
+                    });
                   });
-                });
-              </script>
+                </script>
 
             </article>
             <article class="article-box">
