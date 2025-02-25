@@ -636,6 +636,14 @@ body.light .logo {
   .work-img {
     margin-block-end: var(--gutter-medium);
   }
+
+  .work-img img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Adjust the max-width as needed */
+    max-height: 420px; /* Adjust the max-height as needed */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
 }
 
 .work-box:not(:last-child) {
@@ -819,6 +827,47 @@ body.dark .work-links img {
   display: flex;
   flex-direction: column;
 }
+/* Styling for the article text */
+.article-textbox p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Styling for the unordered list */
+.article-textbox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styling for the list items */
+.article-textbox ul li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Styling for the strong elements */
+.article-textbox ul li strong {
+  color: #b0abab;
+}
+
+/* Styling for the links */
+.article-textbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article-textbox a:hover {
+  text-decoration: underline;
+}
+
+.article-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
 .article-text {
   font-size: var(--text-small);
@@ -854,6 +903,7 @@ body.dark .work-links img {
   .article-box:last-child {
     display: none;
   }
+
 }
 
 @media (max-width: 650px) {
@@ -926,10 +976,11 @@ body.dark .work-links img {
 
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1px;
   margin-block-start: var(--gutter-x-large);
   list-style-type: none;
+  grid-template-columns: 1fr !important;
   background-image: linear-gradient(
     rgba(88, 88, 88, 0.297),
     rgba(214, 214, 214, 0.082)
@@ -951,8 +1002,12 @@ body.dark .work-links img {
 .testimonial {
   display: flex;
   flex-direction: column;
-  padding: var(--gutter-small);
   background-color: var(--bg-color-primary);
+  padding: var(--gutter-medium); /* Wider testimonial box */
+  margin: 0 auto;
+  max-width: 100% !important;
+  margin: 0;
+      /* Center it */
 }
 
 .testimonial-text {
