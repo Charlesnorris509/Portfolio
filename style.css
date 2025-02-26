@@ -1,3 +1,6 @@
+/* --------------------------------- */
+/* ----- Basic Setup -----*/
+/* --------------------------------- */
 
 @font-face {
   font-family: "Mona Sans";
@@ -146,8 +149,6 @@ h3,
 
 .h1 {
   font-size: var(--h1);
-  text-align: center;
-  margin: 0; 
 }
 
 .h2 {
@@ -493,6 +494,12 @@ body.light .header {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.h1 {
+  text-align: center; /* Center the text within the h1 */
+  margin: 0; /* Remove default margin */
+  line-height: 1.2; /* Adjust as needed */
 }
 
 .h1 span {
@@ -1148,7 +1155,7 @@ body.dark .work-links img {
   block-size: var(--gutter-nano);
   inline-size: var(--gutter-nano);
   border-radius: 50%;
-  background-color: red;
+  background-color: rgb(0, 255, 64);
   animation: blink 550ms alternate infinite var(--easing);
 }
 
