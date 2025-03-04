@@ -365,16 +365,16 @@
                   </span>
                 </div>
               </div>
-              </picture>
-              <video id="myVideo" width="400" height="320" class="article-illustration">
-                <source src="assets/images/NflHelmetMapping.mp4" type="video/mp4">
-              </video>
-              <br>
-              <button id="video-btn" class="video-btn">Play</button>
+              <div class="video-container">
+                <video id="myVideo" width="600" height="420" class="article-illustration">
+                  <source src="assets/images/NflHelmetMapping.mp4" type="video/mp4">
+                </video>
+                <button id="myVideo-btn" class="video-btn">Play</button>
+              </div>
               <script>
                 document.addEventListener('DOMContentLoaded', function() {
                   const video = document.getElementById("myVideo");
-                  const playPauseBtn = document.getElementById("video-btn");
+                  const playPauseBtn = document.getElementById("myVideo-btn");
 
                   if (!video || !playPauseBtn) {
                     console.error('Required elements not found');
@@ -392,10 +392,6 @@
                       video.pause();
                       playPauseBtn.textContent = "Play";
                     }
-                  });
-
-                  video.addEventListener('click', function() {
-                    playPauseBtn.click();
                   });
 
                   video.addEventListener('ended', function() {
