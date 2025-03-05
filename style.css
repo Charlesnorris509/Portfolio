@@ -1356,3 +1356,192 @@ input:checked {
   --thumb-position: 100%;
   background-color: var(--track-active);
 }
+
+/* Global responsive container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--site-max-width);
+  }
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 768px) {
+  .menu-btn {
+    padding: 8px 16px;
+    inline-size: 100px;
+  }
+
+  .nav-items {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-item a {
+    font-size: calc(var(--h2) * 0.8);
+  }
+}
+
+/* Header responsiveness */
+@media (max-width: 768px) {
+  .header-textbox {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .header-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Work section responsiveness */
+@media (max-width: 768px) {
+  .work-box {
+    flex-direction: column;
+  }
+
+  .work-img, 
+  .work-textbox {
+    flex-basis: 100%;
+    max-inline-size: 100%;
+  }
+
+  .work-img img,
+  .work-img video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Article section responsiveness */
+@media (max-width: 768px) {
+  .article-boxes {
+    gap: 20px;
+  }
+
+  .article-box {
+    flex-basis: 100%;
+  }
+
+  .featured-article {
+    flex-direction: column;
+  }
+
+  .featured-article .article-textbox,
+  .featured-article .article-illustration {
+    flex-basis: 100%;
+  }
+
+  .article-illustration video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Skills section responsiveness */
+@media (max-width: 768px) {
+  .skills-imgs {
+    gap: 15px;
+  }
+
+  .skills-img {
+    block-size: 60px;
+    inline-size: 60px;
+  }
+}
+
+/* Contact section responsiveness */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form,
+  .contact-textbox {
+    padding: var(--gutter-small);
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: calc(100% - var(--gutter-small));
+  }
+}
+
+/* Footer responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* General text responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --h1: 2rem;
+    --h2: 1.75rem;
+    --h3: 1.5rem;
+    --h4: 1.25rem;
+    --text-large: 1.2rem;
+    --text-medium: 1rem;
+    --text-small: 0.875rem;
+  }
+}
+
+/* Image and video responsiveness */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  .nav-item a {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+  }
+
+  .video-btn {
+    padding: 8px 20px;
+  }
+}
