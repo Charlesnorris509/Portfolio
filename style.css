@@ -45,6 +45,9 @@
 
   --scroll-padding: 4.375rem;
   --radius: 85px;
+
+  --mobile-padding: 1rem;
+  --container-padding: max(var(--mobile-padding), 5vw);
 }
 
 body.dark {
@@ -203,6 +206,8 @@ h3,
 .container {
   max-inline-size: var(--site-max-width);
   margin-inline: auto;
+  width: min(100% - 2rem, var(--site-max-width));
+  padding-inline: var(--container-padding);
 }
 
 @media (max-width: 1375px) {
@@ -1054,6 +1059,8 @@ body.dark .work-links img {
   justify-content: center;
   gap: var(--gutter-x-large);
   padding-block-start: var(--gutter-x-large);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
 }
 
 .skills-img {
@@ -1543,5 +1550,131 @@ video {
 
   .video-btn {
     padding: 8px 20px;
+  }
+}
+
+/* Mobile-first responsive base styles */
+:root {
+  --mobile-padding: 1rem;
+  --container-padding: max(var(--mobile-padding), 5vw);
+}
+
+/* Container improvements */
+.container {
+  width: min(100% - 2rem, var(--site-max-width));
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* Mobile header fixes */
+@media (max-width: 768px) {
+  .header-textbox {
+    position: relative;
+    transform: none;
+    padding: 2rem var(--mobile-padding);
+    margin-top: 4rem;
+  }
+
+  .h1 {
+    font-size: clamp(1.8rem, 5vw, var(--h1));
+    width: 100%;
+  }
+
+  .header-text {
+    font-size: clamp(1rem, 3vw, var(--text-large));
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Work section mobile improvements */
+@media (max-width: 768px) {
+  .work-box {
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .work-img img,
+  .work-img video,
+  .article-illustration video {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Article section mobile fixes */
+@media (max-width: 768px) {
+  .article-boxes {
+    gap: 1.5rem;
+  }
+
+  .featured-article {
+    gap: 2rem;
+  }
+
+  .article-box {
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* Skills grid mobile optimization */
+.skills-imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, var(--gutter-x-large));
+}
+
+/* Contact form mobile improvements */
+@media (max-width: 768px) {
+  .contact-content {
+    padding: var(--mobile-padding);
+  }
+  
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
+
+/* General mobile optimizations */
+@media (max-width: 768px) {
+  img, video {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .video-container {
+    position: relative;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  .nav-item a,
+  input,
+  textarea {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+
+  .work-links,
+  .article-info {
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
