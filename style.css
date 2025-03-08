@@ -33,7 +33,8 @@
     radial-gradient(at 70% 21%, rgba(58, 255, 186, 0.715) 0px, transparent 50%);
   --easing: cubic-bezier(0.86, 0, 0.07, 1);
 
-  --site-max-width: 1280px;
+  --site-max-width: 1440px;  /* Increased from 1280px */
+  --container-width: 90%;    /* New variable for container width */
   --gutter-nano: 0.5rem;
   --gutter-micro: 1rem;
   --gutter-x-small: 1.5rem;
@@ -152,7 +153,25 @@ h3,
 
 .h1 {
   font-size: var(--h1);
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  line-height: 1.3;
+  padding-left: 2rem; /* Add left padding to container */
 }
+
+.h1 span {
+  display: inline-block;
+  font-size: clamp(2rem, 5vw, var(--h1));
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: auto; /* Small left margin */
+  position: relative;
+  left: -2rem; /* Move left */
+}
+
 
 .h2 {
   font-size: var(--h2);
@@ -204,9 +223,8 @@ h3,
 /* Center and constrain the width of page sections */
 
 .container {
-  max-inline-size: var(--site-max-width);
+  width: min(var(--container-width), var(--site-max-width));
   margin-inline: auto;
-  width: min(100% - 2rem, var(--site-max-width));
   padding-inline: var(--container-padding);
 }
 
@@ -498,25 +516,24 @@ body.light .header {
 .header-textbox {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-}
-
-.h1 {
-  text-align: center; /* Center the text within the h1 */
-  margin: 0; /* Remove default margin */
-  line-height: 1.2; /* Adjust as needed */
-}
-
-.h1 span {
-  display: block;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: var(--site-max-width);
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header-text {
   font-size: var(--text-large);
   font-weight: 400;
-  max-inline-size: 745px;
-  margin-block-start: var(--gutter-micro);
-  margin-block-end: var(--gutter-medium);
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 1rem;
 }
 
 @media (max-width: 1200px) {
@@ -715,7 +732,7 @@ body.light .logo {
 }
 
 .work-img {
-  max-inline-size: 785px;
+  max-inline-size: 900px;  /* Increased from 785px */
   transition: 0.6s all;
 }
 
@@ -724,7 +741,7 @@ body.light .work-img {
 }
 
 .work-textbox {
-  max-inline-size: 445px;
+  max-inline-size: 500px;  /* Increased from 445px */
 }
 
 @media (max-width: 885px) {
@@ -823,6 +840,8 @@ body.dark .work-links img {
   flex-flow: row wrap;
   gap: 3.5%;
   margin-block-start: var(--gutter-x-large);
+  max-width: var(--site-max-width);
+  margin-inline: auto;
 }
 
 .article-box {
@@ -1022,24 +1041,35 @@ body.dark .work-links img {
 }
 
 .testimonial-text {
-  font-size: var(--text-small);
-  margin-block-end: var(--gutter-x-small);
+  font-size: var(--text-medium);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--important);
+  font-weight: 400;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--border-dark);
 }
 
 .testimonial-author {
-  margin-block-start: auto;
+  margin-top: auto;
   display: flex;
   align-items: center;
-  gap: var(--gutter-micro);
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
 }
 
 .testimonial-author-name {
-  margin-block-end: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--important);
+  margin-bottom: 0.3rem;
 }
 
-.testimonial-author-name,
 .testimonial-author-job {
-  font-size: initial;
+  font-size: 0.95rem;
+  color: var(--sub);
 }
 
 .testimonial-author > img {
@@ -1047,6 +1077,37 @@ body.dark .work-links img {
   inline-size: 52px;
   border-radius: 50%;
   background-color: var(--bg-color-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .testimonial {
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: calc(var(--text-medium) * 0.95);
+    line-height: 1.6;
+    padding-left: 1rem;
+  }
+
+  .testimonial-author-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-author-job {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-author > img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* --------------------------------- */
@@ -1420,15 +1481,17 @@ input:checked {
 /* Header responsiveness */
 @media (max-width: 768px) {
   .header-textbox {
-    width: 100%;
-    padding: 0 20px;
-    text-align: center;
+    padding: 0 1rem;
   }
 
-  .header-btns {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+  .h1 span {
+    padding: 0 0.5rem;
+  }
+
+  .header-text {
+    font-size: calc(var(--text-large) * 0.9);
+    padding: 0 0.5rem;
+    margin: 1.5rem auto;
   }
 }
 
@@ -1676,5 +1739,48 @@ video {
   .article-info {
     gap: 1rem;
     flex-wrap: wrap;
+  }
+}
+
+/* Responsive breakpoints update */
+@media (min-width: 1440px) {
+  .container {
+    max-width: var(--site-max-width);
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --site-max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --site-max-width: 1024px;
+  }
+  
+  .work-img {
+    max-inline-size: 800px;
+  }
+  
+  .work-textbox {
+    max-inline-size: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-textbox {
+    padding: 0 0.5rem;
+  }
+
+  .h1 span {
+    font-size: calc(var(--h1) * 0.8);
+  }
+
+  .header-text {
+    font-size: calc(var(--text-large) * 0.8);
+    margin: 1rem auto;
   }
 }
