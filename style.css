@@ -878,32 +878,27 @@ body.dark .work-links img {
   display: flex;
   flex-direction: column;
 }
-/* Styling for the article text */
 .article-textbox p {
   font-size: 1.1em;
   line-height: 1.6;
   color: #555;
 }
 
-/* Styling for the unordered list */
 .article-textbox ul {
   list-style-type: none;
   padding: 0;
 }
 
-/* Styling for the list items */
 .article-textbox ul li {
   margin-bottom: 15px;
   font-size: 1.1em;
   color: #444;
 }
 
-/* Styling for the strong elements */
 .article-textbox ul li strong {
   color: #b0abab;
 }
 
-/* Styling for the links */
 .article-textbox a {
   color: #007bff;
   text-decoration: none;
@@ -1698,5 +1693,63 @@ input:checked {
   .header-text {
     font-size: calc(var(--text-large) * 0.8);
     margin: 1rem auto;
+  }
+}
+
+/* Header Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .header-textbox {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .h1 span {
+    position: static;
+    left: auto;
+    transform: none;
+    white-space: normal;
+    text-align: center;
+    margin: 0;
+  }
+
+  .header-text {
+    font-size: 16px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .header-btns {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transform: none;
   }
 }
