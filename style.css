@@ -678,10 +678,12 @@ body.light .logo {
   .work-box {
     flex-direction: column-reverse;
     align-items: flex-start;
+    text-align: center;
   }
 
   .work-img {
-    margin-block-end: var(--gutter-medium);
+    max-inline-size: calc(600px * var(--scale-factor));  /* Increased from 360px */
+    margin: 0 auto 1rem;
   }
 
   .work-img img {
@@ -1521,9 +1523,12 @@ input:checked {
 @media (max-width: 768px) {
   .header-textbox {
     position: relative;
-    top: 20%;
-    transform: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 2rem 1rem;
+    width: 90%;  /* Control width on mobile */
+    margin: 0 auto;
   }
 
   .h1 {
@@ -1565,235 +1570,95 @@ input:checked {
   }
 }
 
-/* Article section responsiveness */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
-  .article-boxes {
-    gap: 20px;
+  /* Center all sections */
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
   }
 
-  .article-box {
-    flex-basis: 100%;
-  }
-
-  .featured-article {
-    flex-direction: column;
-  }
-
-  .featured-article .article-textbox,
-  .featured-article .article-illustration {
-    flex-basis: 100%;
-  }
-
-  .article-illustration video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Skills section responsiveness */
-@media (max-width: 768px) {
-  .skills-imgs {
-    gap: 15px;
-  }
-
-  .skills-img {
-    block-size: 60px;
-    inline-size: 60px;
-  }
-}
-
-/* Contact section responsiveness */
-@media (max-width: 768px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form,
-  .contact-textbox {
-    padding: var(--gutter-small);
-  }
-
-  .form-field input,
-  .form-field textarea {
-    width: calc(100% - var(--gutter-small));
-  }
-}
-
-/* Footer responsiveness */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-links {
-    justify-content: center;
-  }
-}
-
-/* General text responsiveness */
-@media (max-width: 768px) {
-  :root {
-    --h1: 2rem;
-    --h2: 1.75rem;
-    --h3: 1.5rem;
-    --h4: 1.25rem;
-    --text-large: 1.2rem;
-    --text-medium: 1rem;
-    --text-small: 0.875rem;
-  }
-}
-
-/* Image and video responsiveness */
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Improved touch targets for mobile */
-@media (max-width: 768px) {
-  button,
-  .btn,
-  .nav-item a {
-    min-height: 44px;
-    min-width: 44px;
-    padding: 12px 24px;
-  }
-
-  .video-btn {
-    padding: 8px 20px;
-  }
-}
-
-/* Mobile-first responsive base styles */
-:root {
-  --mobile-padding: 1rem;
-  --container-padding: max(var(--mobile-padding), 5vw);
-}
-
-/* Container improvements */
-.container {
-  width: min(100% - 2rem, var(--site-max-width));
-  margin-inline: auto;
-  padding-inline: var(--container-padding);
-}
-
-/* Mobile header fixes */
-@media (max-width: 768px) {
+  /* Header adjustments */
   .header-textbox {
-    position: relative;
-    transform: none;
-    padding: 2rem var(--mobile-padding);
-    margin-top: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
   }
 
-  .h1 {
-    font-size: clamp(1.8rem, 5vw, var(--h1));
-    width: 100%;
-  }
-
-  .header-text {
-    font-size: clamp(1rem, 3vw, var(--text-large));
-    width: 100%;
-    margin-inline: auto;
-  }
-}
-
-/* Work section mobile improvements */
-@media (max-width: 768px) {
+  /* Work section adjustments */
   .work-box {
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: 3rem;
   }
 
-  .work-img img,
-  .work-img video,
-  .article-illustration video {
-    aspect-ratio: 16/9;
+  .work-img {
     width: 100%;
-    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .work-img img,
+  .work-img video {
+    width: 100%;
+    height: 300px;
     object-fit: cover;
   }
-}
 
-/* Article section mobile fixes */
-@media (max-width: 768px) {
+  /* Articles section */
   .article-boxes {
-    gap: 1.5rem;
-  }
-
-  .featured-article {
-    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .article-box {
     width: 100%;
-    margin-inline: auto;
-  }
-}
-
-/* Skills grid mobile optimization */
-.skills-imgs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-  gap: clamp(1rem, 3vw, var(--gutter-x-large));
-}
-
-/* Contact form mobile improvements */
-@media (max-width: 768px) {
-  .contact-content {
-    padding: var(--mobile-padding);
-  }
-  
-  .form-field {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  textarea {
-    min-height: 120px;
-  }
-}
-
-/* General mobile optimizations */
-@media (max-width: 768px) {
-  img, video {
-    width: 100%;
-    height: auto;
-  }
-
-  .video-btn {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .video-container {
-    position: relative;
-  }
-}
-
-/* Touch-friendly improvements */
-@media (max-width: 768px) {
-  button,
-  .btn,
-  .nav-item a,
-  input,
-  textarea {
-    min-height: 44px;
-    padding: 0.75rem 1rem;
-  }
-
-  .work-links,
-  .article-info {
+  /* Skills section */
+  .skills-imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;
-    flex-wrap: wrap;
+    justify-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Testimonials section */
+  .testimonial {
+    width: 90%;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+  }
+
+  /* Contact form */
+  .contact-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Footer adjustment */
+  .footer-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
-/* Responsive breakpoints update */
+/* --------------------------------- */
+/* ----- Responsive breakpoints -----*/
+/* --------------------------------- */
+
 @media (min-width: 1440px) {
   .container {
     max-width: var(--site-max-width);
