@@ -746,6 +746,35 @@ body.light .logo {
   transform: scale(0.95);
 }
 
+/* Mobile video adjustments */
+@media (max-width: 768px) {
+  .article-box .video-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .article-box video {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .featured-article .article-illustration {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .video-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}
 
 .work-img,
 .work-textbox {
@@ -1595,17 +1624,36 @@ input:checked {
     margin-bottom: 3rem;
   }
 
+  /* Work section mobile image adjustments */
   .work-img {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
   }
 
-  .work-img img,
-  .work-img video {
+  .work-img img {
     width: 100%;
-    height: 300px;
+    height: 300px !important; /* Force consistent height */
     object-fit: cover;
+    max-width: 100%;
+  }
+
+  /* Remove inline styles from HTML */
+  .work-img img[src*="Optiver"] {
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover;
+  }
+
+  .work-img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .work-img img {
+    width: 100%;
+    max-width: 500px;
   }
 
   /* Articles section */
