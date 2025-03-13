@@ -12,43 +12,34 @@
 }
 
 :root {
-  --h1: 3.5rem;
-  --h2: 3rem;
-  --h3: 2.145rem;
-  --h4: 1.5rem;
-  --text-large: 1.6rem;
-  --text-medium: 1.275rem;
-  --text-small: 1.125rem;
+  /* Scale factor to simulate 60% zoom */
+  --scale-factor: 0.6;
 
-  --gradient-brand: radial-gradient(
-      at 60% 31%,
-      rgb(255, 131, 139) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 48% 98%, rgba(0, 255, 166, 0.707) 0px, transparent 50%),
-    radial-gradient(at 84% 67%, rgb(255, 129, 125) 0px, transparent 50%),
-    radial-gradient(at 16% 47%, rgb(255, 90, 112) 0px, transparent 50%),
-    radial-gradient(at 73% 11%, rgb(115, 255, 225) 0px, transparent 50%),
-    radial-gradient(at 49% 37%, rgba(255, 249, 89, 0.695) 0px, transparent 50%),
-    radial-gradient(at 70% 21%, rgba(58, 255, 186, 0.715) 0px, transparent 50%);
-  --easing: cubic-bezier(0.86, 0, 0.07, 1);
+  /* Adjust font sizes */
+  --h1: calc(3.5rem * var(--scale-factor));
+  --h2: calc(3rem * var(--scale-factor));
+  --h3: calc(2.145rem * var(--scale-factor));
+  --h4: calc(1.5rem * var(--scale-factor));
+  --text-large: calc(1.6rem * var(--scale-factor));
+  --text-medium: calc(1.275rem * var(--scale-factor));
+  --text-small: calc(1.125rem * var(--scale-factor));
 
-  --site-max-width: 1440px;  /* Increased from 1280px */
-  --container-width: 90%;    /* New variable for container width */
-  --gutter-nano: 0.5rem;
-  --gutter-micro: 1rem;
-  --gutter-x-small: 1.5rem;
-  --gutter-small: 2rem;
-  --gutter-medium: 2.5rem;
-  --gutter-large: 3rem;
-  --gutter-x-large: 6rem;
-  --gutter-huge: 12rem;
+  /* Adjust spacing variables */
+  --gutter-nano: calc(0.5rem * var(--scale-factor));
+  --gutter-micro: calc(1rem * var(--scale-factor));
+  --gutter-x-small: calc(1.5rem * var(--scale-factor));
+  --gutter-small: calc(2rem * var(--scale-factor));
+  --gutter-medium: calc(2.5rem * var(--scale-factor));
+  --gutter-large: calc(3rem * var(--scale-factor));
+  --gutter-x-large: calc(6rem * var(--scale-factor));
+  --gutter-huge: calc(12rem * var(--scale-factor));
 
-  --scroll-padding: 4.375rem;
-  --radius: 85px;
+  /* Adjust radius and other dimensions */
+  --radius: calc(85px * var(--scale-factor));
+  --scroll-padding: calc(4.375rem * var(--scale-factor));
 
-  --mobile-padding: 1rem;
-  --container-padding: max(var(--mobile-padding), 5vw);
+  /* Adjust container width */
+  --site-max-width: calc(1440px * var(--scale-factor));
 }
 
 body.dark {
@@ -732,7 +723,7 @@ body.light .logo {
 }
 
 .work-img {
-  max-inline-size: 900px;  /* Increased from 785px */
+  max-inline-size: calc(900px * var(--scale-factor));  /* Increased from 785px */
   transition: 0.6s all;
 }
 
@@ -741,7 +732,7 @@ body.light .work-img {
 }
 
 .work-textbox {
-  max-inline-size: 500px;  /* Increased from 445px */
+  max-inline-size: calc(500px * var(--scale-factor));  /* Increased from 445px */
 }
 
 @media (max-width: 885px) {
@@ -1125,8 +1116,8 @@ body.dark .work-links img {
 }
 
 .skills-img {
-  block-size: 135px;
-  inline-size: 135px;
+  block-size: calc(135px * var(--scale-factor));
+  inline-size: calc(135px * var(--scale-factor));
 }
 
 @media (max-width: 1100px) {
