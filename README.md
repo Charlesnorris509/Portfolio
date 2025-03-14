@@ -22,7 +22,6 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Fea
 - CSS3 (Custom properties, Flexbox, Grid)
 - JavaScript (ES6+)
 - Custom Font (Mona Sans)
-- Netlify Forms
 
 ## 🎯 Project Structure
 
@@ -40,12 +39,12 @@ portfolio-template/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio-template.git
+git clone https://github.com/yourusername/portfolio.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd portfolio-template
+cd portfolio
 ```
 
 3. Open `index.html` in your browser or use a local server:
