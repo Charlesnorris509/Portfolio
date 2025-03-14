@@ -302,12 +302,11 @@ body.light .btn-cta {
   box-shadow: #07070733 0 0 0 var(--gutter-nano);
 }
 
-
 .header-btns .btn {
   padding: 20px 60px;  /* Increased padding */
   border-radius: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 35px;     
+  font-size: 100px;     /* Increased from previous size */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -327,16 +326,25 @@ body.light .btn-cta {
   display: flex;
   flex-wrap: wrap;     /* Allow buttons to wrap to the next line */
   gap: 20px;           /* Adjusted gap for better spacing */
-  justify-content: center; /* Center the buttons */
+  justify-content: flex-start; /* Changed from center */
   margin-top: 20px;    /* Added top margin */
+  width: 100%;
+  padding: 0; /* Remove any padding */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header-btns .btn {
-    font-size: 18px;   /* Slightly smaller font size for mobile */
+    font-size: 20px;   /* Increased mobile font size */
     padding: 16px 40px; /* Adjusted padding for mobile */
     min-width: 180px;  /* Adjusted min-width for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-btns {
+    justify-content: center; /* Keep centered on mobile */
+    transform: none;
   }
 }
 
@@ -542,10 +550,20 @@ body.light .header {
   font-size: var(--text-large);
   font-weight: 400;
   max-width: 900px;
-  margin: 2rem auto;
-  text-align: center;
+  margin: 2rem 0;  /* Changed from margin: 2rem auto */
+  text-align: left; /* Changed from center */
   line-height: 1.6;
-  padding: 0 1rem;
+  padding: 0;      /* Removed horizontal padding */
+}
+
+/* Update mobile styles for header text */
+@media (max-width: 768px) {
+  .header-text {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -573,7 +591,7 @@ body.light .header {
 .header-btns {
   display: inline-flex;
   gap: calc(10px * var(--scale-factor));
-  transform: scale(0.8);
+  transform: scale(1);
   transform-origin: left center;
 }
 
@@ -799,6 +817,29 @@ body.light .logo {
   }
 }
 
+/* Work section video adjustments */
+.work-box .work-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.work-img #projectVideo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-img .video-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
 .work-img,
 .work-textbox {
   flex-basis: 49%;
@@ -901,6 +942,28 @@ body.dark .work-links img {
   to {
     transform: none;
     opacity: 1;
+  }
+}
+
+/* Work section video button positioning */
+.work-img {
+  position: relative;
+}
+
+.work-img .video-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 20px; /* Changed from 50% */
+  transform: none; /* Remove the translateX */
+  z-index: 2;
+  background-color: rgba(203, 208, 214, 0.8); /* Semi-transparent background */
+}
+
+/* Ensure proper positioning in mobile view */
+@media (max-width: 768px) {
+  .work-img .video-btn {
+    left: 20px;
+    transform: none;
   }
 }
 
