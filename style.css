@@ -977,7 +977,7 @@ body.dark .work-links img {
 
 .featured-article #myVideo-btn {
   position: absolute;
-  bottom: 0px;  
+  margin-top: 10px;
   left: 0px;
   transform: none;
   z-index: 2;
