@@ -967,6 +967,44 @@ body.dark .work-links img {
   }
 }
 
+/* Featured article video container and button positioning */
+.featured-article .video-container {
+  position: relative;
+  width: 100%;
+}
+
+.featured-article #myVideo-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  transform: none;
+  z-index: 2;
+  background-color: rgba(203, 208, 214, 0.8);
+}
+
+@media (max-width: 768px) {
+  .featured-article .video-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .featured-article #myVideo-btn {
+    bottom: 10px;
+    left: 20px;
+    transform: none;
+    position: absolute;
+  }
+
+  .featured-article .article-illustration {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
 /* --------------------------------- */
 /* ----- Articles -----*/
 /* --------------------------------- */
