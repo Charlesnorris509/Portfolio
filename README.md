@@ -1,4 +1,4 @@
-# Modern Portfolio Website
+# Portfolio
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features dark/light theme, smooth animations, and mobile-first design.
 
