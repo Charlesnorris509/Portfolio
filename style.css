@@ -977,7 +977,7 @@ body.dark .work-links img {
 
 .featured-article #myVideo-btn {
   position: absolute;
-  bottom: -10px; /* Adjust this value to place the button under the video */
+  bottom: -100px; /* Adjust this value to place the button under the video */
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
