@@ -977,11 +977,12 @@ body.dark .work-links img {
 
 .featured-article #myVideo-btn {
   position: absolute;
-  margin-top: 20px;
-  left: 1px;
-  transform: none;
+  bottom: -10px; /* Adjust this value to place the button under the video */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   background-color: rgba(203, 208, 214, 0.8);
+  padding: 10px 24px; /* Added padding for better visibility */
 }
 
 @media (max-width: 768px) {
