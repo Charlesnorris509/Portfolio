@@ -26,7 +26,7 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Fea
 ## 🎯 Project Structure
 
 ```
-portfolio-template/
+portfolio/
 ├── assets/
 │   ├── fonts/
 │   ├── images/
